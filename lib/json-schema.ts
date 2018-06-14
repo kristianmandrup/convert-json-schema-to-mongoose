@@ -127,10 +127,7 @@ var convertV = (version: any, refSchemas: any, jsonSchema: any): any => {
                 ? [convertV(version, refSchemas, jsonSchema.items)]
             : []
 
-        : !_.has(jsonSchema, 'type')
-            ? mongoose.Schema.Types.Mixed
-
-        : unsupportedJsonSchema(jsonSchema)
+        : mongoose.Schema.Types.Mixed
     )
 }
 
