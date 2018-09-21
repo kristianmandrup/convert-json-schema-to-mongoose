@@ -1,30 +1,30 @@
 {
-  "name": "json-schema-to-mongoose",
-    "version": "0.2.4",
-  "description": "A library for converting json-schema to mongoose schema",
+  "name": "json-schema-to-mongoose-5",
+  "version": "0.3.0",
+  "description": "A library for converting JSON schema to mongoose 5 schema",
   "keywords": [
-    "json_schema",
-    "convert",
     "json",
+    "schema",
+    "convert",
     "mongo",
     "mongoose"
   ],
-  "homepage": "https://github.com/jon49/json-schema-to-mongoose",
+  "homepage": "https://github.com/kristianmandrup/json-schema-to-mongoose-5",
   "repository": {
-    "url": "https://github.com/jon49/json-schema-to-mongoose",
+    "url": "https://github.com/kristianmandrup/json-schema-to-mongoose-5",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/jon49/json-schema-to-mongoose/issues"
+    "url": "https://github.com/kristianmandrup/json-schema-to-mongoose-5/issues"
   },
   "private": false,
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.6.0",
-    "mongoose": "~4.7.1"
+    "lodash": "^4.17.11",
+    "mongoose": "~5.2.16"
   },
   "devDependencies": {
-    "jasmine-node": "^2.0.0"
+    "jasmine-node": "^2.0.1"
   },
   "scripts": {
     "test": "node_modules/.bin/jasmine-node ./test",

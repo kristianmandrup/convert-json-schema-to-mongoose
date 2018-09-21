@@ -1,4 +1,4 @@
-# JSON Schema to Mongoose (Schema)
+# JSON Schema to Mongoose Schema
 
 A translation library between [JSON Schema](http://json-schema.org/) and
 [Mongoose Schema](http://mongoosejs.com/docs/guide.html). Written in TypeScript.
@@ -6,6 +6,17 @@ A translation library between [JSON Schema](http://json-schema.org/) and
 This project was created from the ashes of `json-schema-converter`. I took away
 some features and made it more single purpose and added features to the
 conversion.
+
+## Alternatives
+
+Some of the alternatives...
+
+- 2017 [generate-schema-required](https://www.npmjs.com/package/generate-schema-required)
+- 2016 [mongoosify](https://www.npmjs.com/package/mongoosify)
+- 2016 [mongoose-jsonschema](https://www.npmjs.com/package/mongoose-jsonschema)
+- 2015 [goodeggs-json-schema-converter](https://www.npmjs.com/package/goodeggs-json-schema-converter)
+- 2014 [json-schema-converter](https://www.npmjs.com/package/json-schema-converter)
+- 2014 [json-schema-to-mongoose-schema](https://www.npmjs.com/package/json-schema-to-mongoose-schema)
 
 ## Installation
 
@@ -16,57 +27,52 @@ conversion.
 ```typescript
 /// <reference path="../node_modules/json-schema-to-mongoose/json-schema-to-mongoose.d.ts" />
 
-import createMongooseSchema = require('./lib/json-schema')
-import util = require('util')
+import createMongooseSchema = require("./lib/json-schema");
+import util = require("util");
 
 // Or use plain javascript
 // var createMongooseSchema = require('./lib/json-schema')
 // var util = require('util')
 
 // example json-schema references
-var refs =
-{
-    yep:
-    {
-        type: 'string',
-        pattern: '^\\d{3}$'
-    },
-    idSpec: {
-        type: 'object',
-        properties:
-        {
-            id:
-            {
-                $ref: 'yep'
-            }
-        }
+var refs = {
+  yep: {
+    type: "string",
+    pattern: "^\\d{3}$"
+  },
+  idSpec: {
+    type: "object",
+    properties: {
+      id: {
+        $ref: "yep"
+      }
     }
-}
+  }
+};
 
 // example schema to convert to mongoose schema
-var schema =
-{
-    type: 'object',
-    properties:
-    {
-        id:
-        {
-            $ref: 'yep'
-        },
-        address:
-        {
-            type: 'object',
-            properties:
-            {
-                street: {type: 'string', default: '44', pattern: '^\\d{2}$'},
-                houseColor: {type: 'string', default: '[Function=Date.now]', format: 'date-time'}
-            }
+var schema = {
+  type: "object",
+  properties: {
+    id: {
+      $ref: "yep"
+    },
+    address: {
+      type: "object",
+      properties: {
+        street: { type: "string", default: "44", pattern: "^\\d{2}$" },
+        houseColor: {
+          type: "string",
+          default: "[Function=Date.now]",
+          format: "date-time"
         }
+      }
     }
-}
+  }
+};
 
 //Convert the schema
-var mongooseSchema = createMongooseSchema(refs, schema)
+var mongooseSchema = createMongooseSchema(refs, schema);
 
 //Alternative syntax, which makes it so you can convert many at one time.
 
@@ -78,8 +84,7 @@ var mongooseSchema = createMongooseSchema(refs, schema)
 //     return mongooseSchemas.concat(convert(schema))
 // }, []))
 
-console.log(util.inspect(mongooseSchema, false, null))
+console.log(util.inspect(mongooseSchema, false, null));
 
-var Schema = new mongoose.Schema(mongooseSchema)
-
+var Schema = new mongoose.Schema(mongooseSchema);
 ```
