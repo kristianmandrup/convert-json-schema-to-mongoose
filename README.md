@@ -20,59 +20,60 @@ Some of the alternatives...
 
 ## Installation
 
-    npm install json-schema-to-mongoose --save
+`npm i json-schema-to-mongoose-5 -S`
 
 ## Usage
 
 ```typescript
-/// <reference path="../node_modules/json-schema-to-mongoose/json-schema-to-mongoose.d.ts" />
-
-import createMongooseSchema = require("./lib/json-schema");
-import util = require("util");
+import createMongooseSchema from 'json-schema-to-mongoose';
 
 // Or use plain javascript
-// var createMongooseSchema = require('./lib/json-schema')
-// var util = require('util')
+// const createMongooseSchema = require('json-schema-to-mongoose').default;
 
 // example json-schema references
-var refs = {
-  yep: {
-    type: "string",
-    pattern: "^\\d{3}$"
-  },
-  idSpec: {
-    type: "object",
-    properties: {
-      id: {
-        $ref: "yep"
-      }
+const refs =
+{
+    yep:
+    {
+        type: 'string',
+        pattern: '^\\d{3}$'
+    },
+    idSpec: {
+        type: 'object',
+        properties:
+        {
+            id:
+            {
+                $ref: 'yep'
+            }
+        }
     }
-  }
 };
 
 // example schema to convert to mongoose schema
-var schema = {
-  type: "object",
-  properties: {
-    id: {
-      $ref: "yep"
-    },
-    address: {
-      type: "object",
-      properties: {
-        street: { type: "string", default: "44", pattern: "^\\d{2}$" },
-        houseColor: {
-          type: "string",
-          default: "[Function=Date.now]",
-          format: "date-time"
+const schema =
+{
+    type: 'object',
+    properties:
+    {
+        id:
+        {
+            $ref: 'yep'
+        },
+        address:
+        {
+            type: 'object',
+            properties:
+            {
+                street: {type: 'string', default: '44', pattern: '^\\d{2}$'},
+                houseColor: {type: 'string', default: '[Function=Date.now]', format: 'date-time'}
+            }
         }
-      }
     }
-  }
 };
 
 //Convert the schema
-var mongooseSchema = createMongooseSchema(refs, schema);
+const mongooseSchema = createMongooseSchema(refs, schema);
 
 //Alternative syntax, which makes it so you can convert many at one time.
 
@@ -84,7 +85,8 @@ var mongooseSchema = createMongooseSchema(refs, schema);
 //     return mongooseSchemas.concat(convert(schema))
 // }, []))
 
-console.log(util.inspect(mongooseSchema, false, null));
+console.dir(mongooseSchema, {depth: null});
 
-var Schema = new mongoose.Schema(mongooseSchema);
+const Schema = new mongoose.Schema(mongooseSchema);
+
 ```
