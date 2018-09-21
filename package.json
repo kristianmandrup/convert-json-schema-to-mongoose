@@ -1,5 +1,5 @@
 {
-  "name": "json-schema-to-mongoose-5",
+  "name": "convert-json-schema-to-mongoose",
   "version": "0.3.0",
   "description": "A library for converting JSON schema to mongoose 5 schema",
   "keywords": [
@@ -9,13 +9,13 @@
     "mongo",
     "mongoose"
   ],
-  "homepage": "https://github.com/kristianmandrup/json-schema-to-mongoose-5",
+  "homepage": "https://github.com/kristianmandrup/convert-json-schema-to-mongoose",
   "repository": {
-    "url": "https://github.com/kristianmandrup/json-schema-to-mongoose-5",
+    "url": "https://github.com/kristianmandrup/convert-json-schema-to-mongoose",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/kristianmandrup/json-schema-to-mongoose-5/issues"
+    "url": "https://github.com/kristianmandrup/convert-json-schema-to-mongoose/issues"
   },
   "private": false,
   "license": "MIT",

@@ -25,7 +25,7 @@ Some of the alternatives...
 ## Usage
 
 ```typescript
-import createMongooseSchema from 'json-schema-to-mongoose';
+import createMongooseSchema from 'convert-json-schema-to-mongoose';
 
 // Or use plain javascript
 // const createMongooseSchema = require('json-schema-to-mongoose').default;
