@@ -1,6 +1,6 @@
 {
   "name": "convert-json-schema-to-mongoose",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A library for converting JSON schema to mongoose 5 schema",
   "keywords": [
     "json",
