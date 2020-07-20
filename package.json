@@ -20,15 +20,15 @@
   "private": false,
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.11",
-    "mongoose": "~5.2.16"
+    "lodash": "^4.17.19",
+    "mongoose": "~5.9.25"
   },
   "devDependencies": {
-    "@types/jasmine": "^2.8.8",
-    "@types/lodash": "^4.14.116",
-    "@types/mongoose": "^5.2.17",
-    "@types/node": "^10.10.1",
-    "jasmine-node": "^2.0.1"
+    "@types/jasmine": "^3.5.11",
+    "@types/lodash": "^4.14.157",
+    "@types/mongoose": "^5.7.32",
+    "@types/node": "^12.12.50",
+    "jasmine-node": "^3.0.0"
   },
   "scripts": {
     "test": "node_modules/.bin/jasmine-node ./test",
