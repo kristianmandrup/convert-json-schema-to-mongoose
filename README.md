@@ -20,12 +20,12 @@ Some of the alternatives...
 
 ## Installation
 
-`npm i json-schema-to-mongoose-5 -S`
+`npm i convert-json-schema-to-mongoose -S`
 
 ## Usage
 
 ```typescript
-import createMongooseSchema from 'convert-json-schema-to-mongoose';
+import { createMongooseSchema } from 'convert-json-schema-to-mongoose';
 
 // Or use plain javascript
 // const createMongooseSchema = require('json-schema-to-mongoose').default;
