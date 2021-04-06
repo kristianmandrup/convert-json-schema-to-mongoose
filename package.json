@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.20",
-    "mongoose": "~5.11.8"
+    "mongoose": "^5.11.8"
   },
   "devDependencies": {
     "@types/jasmine": "^3.6.2",
