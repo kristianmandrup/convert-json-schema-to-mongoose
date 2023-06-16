@@ -21,12 +21,12 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21",
-    "mongoose": "^5.12.5"
+    "mongoose": "^7.3.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.6.10",
-    "@types/lodash": "^4.14.168",
-    "@types/node": "^14.14.42",
+    "@types/jasmine": "^4.3.2",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^20.3.1",
     "jasmine-node": "^3.0.0"
   },
   "scripts": {
