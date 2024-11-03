@@ -1,2 +1,6 @@
 test
 .vscode
+.travis.yml
+*.map
+*.ts
+!*.d.ts

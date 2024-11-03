@@ -1,6 +1,6 @@
 {
   "name": "convert-json-schema-to-mongoose",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A library for converting JSON schema to mongoose 5 schema",
   "keywords": [
     "json",
@@ -21,12 +21,12 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21",
-    "mongoose": "^7.3.0"
+    "mongoose": "^8.8.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^4.3.2",
-    "@types/lodash": "^4.14.195",
-    "@types/node": "^20.3.1",
+    "@types/jasmine": "^5.1.4",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.8.7",
     "jasmine-node": "^3.0.0"
   },
   "scripts": {
