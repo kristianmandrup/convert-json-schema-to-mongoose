@@ -9,3 +9,6 @@ bin
 *.njsproj
 *.tmp
 *.dat
+/dist/
+*.js
+*.map
