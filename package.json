@@ -19,19 +19,27 @@
   },
   "private": false,
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jasmine ./dist/test/*.js",
+    "start": "node dist/index.js"
+  },
+  "files": [
+    "dist/**",
+    "!*.map"
+  ],
   "dependencies": {
     "lodash": "^4.17.21",
-    "mongoose": "^8.8.0"
+    "mongoose": "^8.9.5"
   },
   "devDependencies": {
-    "@types/jasmine": "^5.1.4",
-    "@types/lodash": "^4.17.13",
-    "@types/node": "^22.8.7",
-    "jasmine-node": "^3.0.0"
-  },
-  "scripts": {
-    "test": "node_modules/.bin/jasmine-node ./test",
-    "start": "node index.js"
-  },
-  "main": "index"
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jasmine": "^5.1.5",
+    "@types/lodash": "^4.17.14",
+    "@types/node": "^22.10.7",
+    "jasmine": "^5.5.0",
+    "typescript": "^5.7.3"
+  }
 }
